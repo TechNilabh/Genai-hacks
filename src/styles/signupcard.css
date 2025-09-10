@@ -1,0 +1,54 @@
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
+}
+.card {
+  position: relative; /* make pseudo-elements relative to card */
+  border-radius: 8px;
+  overflow: hidden; /* ensures glow stays within card bounds */
+  z-index: 0; /* so pseudo-elements go behind content */
+
+}
+.card::before {
+  content: "";
+  position: absolute;
+  inset: -12px; /* how far the glow extends out */
+  border-radius: inherit;
+  background-image: linear-gradient(
+    var(--rotate),
+    #5ddcff,
+    #3c67e3 43%,
+    #4e00c2
+  );
+  filter: blur(40px); /* bigger blur = stronger glow aura */
+  z-index: -2;
+  animation: spin 2.5s linear infinite;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: black; /* card body color */
+  z-index: -1;
+}
+
+
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+  100% {
+    --rotate: 360deg;
+  }
+}
+
+a {
+  color: #212534;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-weight: bold;
+  margin-top: 2rem;
+}
