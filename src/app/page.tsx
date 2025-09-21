@@ -1,12 +1,10 @@
-import Image from "next/image";
 import { Spotlight } from "@/components/ui/spotlight-new";
 import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
 
 export default function Home() {
   return (
     <div className="font-sans items-center justify-items-center min-h-screen px-16 py-8 bg-[#000000] text-white">
-      
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start ">
+      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
         <Spotlight />
         <BackgroundBeamsWithCollision className="bg-[#000000] w-[100%] h-[100%]">
           <h2 className="text-2xl relative z-20 md:text-4xl lg:text-7xl font-bold text-center text-white dark:text-white font-sans tracking-tight">
