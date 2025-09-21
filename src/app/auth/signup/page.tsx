@@ -6,7 +6,6 @@ import { cn } from "@/lib/utils";
 import {
   IconBrandGithub,
   IconBrandGoogle,
-  IconBrandOnlyfans,
 } from "@tabler/icons-react";
 import "../../../styles/signupcard.css"
 

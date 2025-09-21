@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Spotlight } from "@/components/ui/spotlight-new";
 import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
 
